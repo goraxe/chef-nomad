@@ -10,8 +10,8 @@ No  restrictions, but works only on systems with upstart or systemd.
 
 ## Attributes
 
-|Key|Description|Default/type|
-|-|-|-|
+|Key|Description|Default|
+|---|---|---|
 |client_enabled|Enables client mode. You can use this attribute instead of adding corresponding recipe|`false`|
 |server_enabled|Enables server mode. You can use this attribute instead of adding corresponding recipe|`false`|
 |bind_addr|Nomad agent bind address.|`"0.0.0.0"`|
