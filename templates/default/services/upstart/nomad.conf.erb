@@ -1,0 +1,12 @@
+description "Nomad Agent Service"
+
+start on filesystem and net-device-up IFACE!=lo
+stop on runlevel [!2345]
+
+kill timeout 20
+setuid <%= @user %>
+setgid <%= @group %>
+
+limit nofile <%= @nofile %> <%= @nofile %>
+
+exec /usr/bin/nomad agent -config <%= @config %>
