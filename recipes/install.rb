@@ -8,7 +8,7 @@ include_recipe 'nomad::config'
 
 ver = node['nomad']['version']
 checksum = node['nomad']['version_checksums'][ver]
-nomad_zip = "#{node['nomad']['data_dir']}/nomad.zip"
+nomad_zip = "#{node['nomad']['datadir']}/nomad.zip"
 
 package 'unzip'
 
@@ -21,7 +21,7 @@ remote_file 'nomad.zip' do
 end
 
 execute 'unzip nomad' do
-  command "unzip #{nomad_zip} -d /usr/bin"
+  command "unzip -o #{nomad_zip} -d /usr/bin"
   subscribes :run, 'remote_file[nomad.zip]'
   action :nothing
 end
