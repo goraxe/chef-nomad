@@ -28,8 +28,8 @@ end
 
 service_manager 'nomad' do
   supports status: true, reload: false
-  user node['nomad']['user']
-  group node['nomad']['user']
+  user node['nomad']['unprivileged'] ? node['nomad']['user'] : 'root'
+  group node['nomad']['unprivileged'] ? node['nomad']['user'] : 'root'
 
   variables(
     config: node['nomad']['confdir'],
