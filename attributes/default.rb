@@ -1,6 +1,7 @@
 default['nomad']['version'] = '0.4.1'
 default['nomad']['version_checksums'] = {
-  '0.4.1' => '0cdb5dd95c918c6237dddeafe2e9d2049558fea79ed43eacdfcd247d5b093d67'
+  '0.4.1' => '0cdb5dd95c918c6237dddeafe2e9d2049558fea79ed43eacdfcd247d5b093d67',
+  '0.5.4' => 'ed9eb471b9f5bab729cfa402db5aa56e1d935c328ac48327267e0ea53568d5c2'
 }
 
 
