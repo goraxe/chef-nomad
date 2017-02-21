@@ -36,6 +36,7 @@ service_manager 'nomad' do
     nofile: node['nomad']['nofile']
   )
 
+  subscribes :restart, 'remote_file[nomad.zip]'
   subscribes :restart, 'template[nomad.conf.hcl]'
   action :start
 end
