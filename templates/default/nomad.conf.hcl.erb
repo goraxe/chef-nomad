@@ -30,6 +30,9 @@ server {
 
 client {
   enabled = <%= @client['enabled'] %>
+  <% if @client['servers'] -%>
+  servers = <%= @client['servers'].to_json %>
+  <% end -%>
   node_class = "<%= @client['node_class'] %>"
   network_speed = <%= @client['network_speed'] %>
 
@@ -43,7 +46,7 @@ client {
     memory = <%= @client['reserved']['memory'] %>
     cpu = <%= @client['reserved']['cpu'] %>
     disk = <%= @client['reserved']['disk'] %>
-    reserved_ports = "<%= @client['reserved']['reserved_ports'].join(", ") %>"
+    reserved_ports = "<%= @client['reserved']['reserved_ports'].join(",") %>"
   }
 
   meta {
