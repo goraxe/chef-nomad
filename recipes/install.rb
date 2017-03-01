@@ -22,7 +22,7 @@ end
 
 execute 'unzip nomad' do
   command "unzip -o #{nomad_zip} -d /usr/bin"
-  subscribes :run, 'remote_file[nomad.zip]'
+  subscribes :run, 'remote_file[nomad.zip]', :immediately
   action :nothing
 end
 
