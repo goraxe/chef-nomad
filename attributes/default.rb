@@ -48,7 +48,7 @@ default['nomad']['client'] = {
     memory: 0,
     cpu:    0,
     disk:   0,
-    reserved_ports: %w(22 8500-8600 4646 4648)
+    reserved_ports: []
   },
   meta: {},
   options: {

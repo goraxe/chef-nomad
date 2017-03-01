@@ -29,6 +29,11 @@ Recipes:
 
 Include either of recipes or both of them into your **run_list** to install nomad and get particular nomad agent mode configured.
 
+
+## Known Issues
+
+* Setting `reserved.reserved_ports` might break tasks allocation at least upto **v0.4.1**, nomad fails allocation without any details.
+
 ## License and Authors
 
 Author:: Denis Baryshev (<dennybaa@gmail.com>)
